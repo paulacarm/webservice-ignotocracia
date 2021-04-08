@@ -25,7 +25,7 @@ import com.ignotocracia.app.service.UserService;
 
 @RestController
 @RequestMapping("/api/users")
-@CrossOrigin(origins="http://localhost:8080")
+@CrossOrigin
 public class UserController {
 	
 	@Autowired
@@ -50,7 +50,7 @@ public class UserController {
 		}
 		return ResponseEntity.ok(oUser);
 	}
-	
+
 	//Editar usuario
 	
 	@PutMapping("/{id}")
@@ -87,7 +87,7 @@ public class UserController {
 
 	
 	//Leer todos los usuarios
-	
+	@CrossOrigin
 	@GetMapping
 	public List<User> readAll(){
 		//Hay que convertir el iterable en una lista. false=secuencial en vez de paralelo

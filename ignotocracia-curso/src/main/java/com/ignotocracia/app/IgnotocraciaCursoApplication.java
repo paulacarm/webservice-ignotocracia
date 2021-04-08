@@ -8,6 +8,7 @@ public class IgnotocraciaCursoApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(IgnotocraciaCursoApplication.class, args);
+		
 	}
 
 }

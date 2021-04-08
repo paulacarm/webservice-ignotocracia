@@ -28,6 +28,7 @@ public class User implements Serializable {
 	private String email;
 	
 	private Boolean enabled;
+	
 	public Long getId() {
 		return id;
 	}
