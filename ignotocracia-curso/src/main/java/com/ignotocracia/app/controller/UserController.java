@@ -8,6 +8,7 @@ import java.util.stream.StreamSupport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -33,6 +34,7 @@ public class UserController {
 	
 	//CRUD
 	//Crear usuario
+	@PreAuthorize("hasRole('ADMIN')")
 	@PostMapping
 	public ResponseEntity<User> create(@RequestBody User user){
 		//Va a recibir en el cuerpo de la peticion un usuario y que lo guardaremos y lo devolveremos
@@ -52,7 +54,7 @@ public class UserController {
 	}
 
 	//Editar usuario
-	
+	@PreAuthorize("hasRole('ADMIN')")
 	@PutMapping("/{id}")
 	public ResponseEntity<?> update(@RequestBody User userDetails,@PathVariable(value="id") Long userId){
 		//Optional se utiliza para evitar los null en los objetos
@@ -74,6 +76,7 @@ public class UserController {
 	}
 	
 	//Borrar un usuario
+	@PreAuthorize("hasRole('ADMIN')")
 	@DeleteMapping("/{id}")
 	public ResponseEntity<?> delete(@PathVariable(value="id") Long userId ){
 	Optional<User> user=userService.findById(userId);

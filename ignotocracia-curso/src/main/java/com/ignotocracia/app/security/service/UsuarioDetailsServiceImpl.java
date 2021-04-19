@@ -15,6 +15,10 @@ import com.ignotocracia.app.security.entity.UsuarioPrincipal;
 public class UsuarioDetailsServiceImpl implements UserDetailsService{
 	@Autowired
 	UsuarioService usuarioService;
+	
+	/**
+	 * Convierte UsuarioPrincipal en usuario
+	 */
 	@Override
 	public UserDetails loadUserByUsername(String nombreUsuario) throws UsernameNotFoundException {
 		Usuario usuario= usuarioService.getByNombreUsuario(nombreUsuario).get();

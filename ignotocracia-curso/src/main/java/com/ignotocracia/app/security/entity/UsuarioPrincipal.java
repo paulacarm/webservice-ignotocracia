@@ -14,14 +14,17 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import com.sun.istack.NotNull;
 
+/**Esta clase será la encargada de generar la seguridad
+Tendrá los mismos atributos que la clase Usuario, excepuando el id.
+En vez de tener roles tendrá authorities.(Clase propia de la seguridad de Spring boot).
+Esta clase no es una entidad. No estará en la BD*/
 
-
-//Esta clase será la encargada de generar la seguridad
-//Tendrá los mismos atributos que la clase Usuario, excepuando el id. En vez de tener
-//roles tendrá authorities. Clase propia de la seguridad de Spring boot.
-//Esta clase no es una entidad. No estará en la BD
 public class UsuarioPrincipal implements UserDetails{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String nombre;
 	private String nombreusuario;
 	private String email;

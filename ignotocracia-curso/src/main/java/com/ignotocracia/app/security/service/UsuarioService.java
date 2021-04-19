@@ -11,6 +11,12 @@ import org.springframework.transaction.annotation.Transactional;
 import com.ignotocracia.app.security.entity.Usuario;
 import com.ignotocracia.app.security.repository.UsuarioRepository;
 // Transactional es para mantener la coherencia en la BD. Si falla una operacion se hace un rollback
+/**
+ * 
+ * @author paula.carmona.moreno
+ *
+ */
+
 @Service
 @Transactional
 public class UsuarioService {
