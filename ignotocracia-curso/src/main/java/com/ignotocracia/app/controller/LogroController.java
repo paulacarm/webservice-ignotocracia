@@ -24,7 +24,7 @@ import com.ignotocracia.app.entity.Logro;
 import com.ignotocracia.app.service.LogroService;
 
 @RestController
-@RequestMapping("/api/cronologia")
+@RequestMapping("/api/logros")
 @CrossOrigin
 public class LogroController {
 	

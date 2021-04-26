@@ -8,9 +8,9 @@ import com.ignotocracia.app.entity.TipoJuego;
 
 public interface TipoJuegoService {
 	
-	//Devuelve un iterable. Este método  está en el JpaRepository
+
 	public Iterable <TipoJuego> findAll();
-	//Devuele los usuarios con paginación
+	
 	public Page<TipoJuego> findAll(Pageable pageable);
 	
 	public Optional<TipoJuego> findById(Integer id);

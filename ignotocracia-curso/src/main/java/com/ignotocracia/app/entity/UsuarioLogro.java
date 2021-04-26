@@ -77,6 +77,22 @@ private static final long serialVersionUID = 1L;
 
 
 
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+
+	public Logro getLogro() {
+		return logro;
+	}
+
+	public void setLogro(Logro logro) {
+		this.logro = logro;
+	}
+
 	public void setPuntos(int puntos) {
 		this.puntos = puntos;
 	}

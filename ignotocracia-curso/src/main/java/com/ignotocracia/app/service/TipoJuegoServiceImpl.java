@@ -36,13 +36,13 @@ public class TipoJuegoServiceImpl implements TipoJuegoService {
 
 	@Override
 	public TipoJuego save(TipoJuego tipoJuego) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return this.tprepository.save(tipoJuego);
 	}
 
 	@Override
 	public void deleteById(Integer id) {
-		// TODO Auto-generated method stub
+	this.tprepository.deleteById(id);
 		
 	}
 	
