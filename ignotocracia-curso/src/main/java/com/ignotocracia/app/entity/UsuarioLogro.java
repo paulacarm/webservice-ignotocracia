@@ -50,18 +50,6 @@ private static final long serialVersionUID = 1L;
 	@Column(name="puntos")
 	private int puntos;
 
-	
-
-	
-	
-
-
-
-
-
-
-
-
 
 
 	public UsuarioLogro() {

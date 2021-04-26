@@ -77,6 +77,7 @@ public class Pregunta {
 		this.tipoJuego = tipoJuego;
 	}
 
+
 	public Pregunta(@NotNull String pregunta, String saberMas, @NotNull String imagen, String enlaceArticulo) {
 		super();
 		this.pregunta = pregunta;

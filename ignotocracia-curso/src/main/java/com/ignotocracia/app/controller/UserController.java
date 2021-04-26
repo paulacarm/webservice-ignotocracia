@@ -53,7 +53,12 @@ public class UserController {
 		return ResponseEntity.ok(oUser);
 	}
 
-	//Editar usuario
+	/**
+	 * Editar usuario
+	 * @param userDetails
+	 * @param userId
+	 * @return
+	 */
 	@PreAuthorize("hasRole('ADMIN')")
 	@PutMapping("/{id}")
 	public ResponseEntity<?> update(@RequestBody User userDetails,@PathVariable(value="id") Long userId){

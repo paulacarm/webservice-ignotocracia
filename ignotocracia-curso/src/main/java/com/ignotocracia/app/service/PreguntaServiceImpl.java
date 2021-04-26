@@ -18,33 +18,32 @@ public class PreguntaServiceImpl implements PreguntaService{
 	private PreguntaRepository preguntaRepository;
 	@Override
 	public Iterable<Pregunta> findAll() {
-		
 		return this.preguntaRepository.findAll();
 	}
 
 	@Override
 	public Page<Pregunta> findAll(Pageable pageable) {
-		 this.preguntaRepository.findAll(pageable);
-		return null;
+		
+		return  this.preguntaRepository.findAll(pageable);
 	}
 
 	@Override
 	public Optional<Pregunta> findById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+	
+		return this.preguntaRepository.findById(id);
 	}
 
 	@Override
 	public Pregunta save(Pregunta pregunta) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return this.preguntaRepository.save(pregunta);
 	}
 
 	@Override
 	public void deleteById(int id) {
-		// TODO Auto-generated method stub
+		this.preguntaRepository.deleteById(id);
 		
 	}
 
-	//Nos aparecen los métodos definidos en nuestra inferfaz y tenemos que implementarlos
+
 }

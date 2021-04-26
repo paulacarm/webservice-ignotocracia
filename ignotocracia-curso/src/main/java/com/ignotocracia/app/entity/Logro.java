@@ -26,8 +26,8 @@ public class Logro {
 	//Se puede recuperar de manera manual la lista de preguntas en caso de ser muchas
 	//mappedBy:nombre del atributo en la otra clase(Logro logro)
 	
-	@OneToMany(mappedBy="logro")
-	Set<Pregunta> listaPreguntas;
+	//@OneToMany(mappedBy="logro")
+	//Set<Pregunta> listaPreguntas;
 	
 	@OneToMany(mappedBy = "logro")
 	private Set<UsuarioLogro> usuarios = new HashSet<>();
@@ -58,13 +58,7 @@ public class Logro {
 		this.nombre = nombre;
 	}
 
-	public Set<Pregunta> getListaPreguntas() {
-		return listaPreguntas;
-	}
 
-	public void setListaPreguntas(Set<Pregunta> listaPreguntas) {
-		this.listaPreguntas = listaPreguntas;
-	}
 	
 	
 	

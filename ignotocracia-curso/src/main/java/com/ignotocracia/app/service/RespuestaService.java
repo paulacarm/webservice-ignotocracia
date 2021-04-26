@@ -10,9 +10,9 @@ import com.ignotocracia.app.entity.Respuesta;
 
 public interface RespuestaService  {
 	
-	//Devuelve un iterable. Este método  está en el JpaRepository
+
 	public Iterable <Respuesta> findAll();
-	//Devuele los usuarios con paginación
+
 	public Page<Respuesta> findAll(Pageable pageable);
 	
 	public Optional<Respuesta> findById(Integer id);

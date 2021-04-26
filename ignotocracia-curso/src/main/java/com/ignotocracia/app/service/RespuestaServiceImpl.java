@@ -31,19 +31,19 @@ public class RespuestaServiceImpl implements RespuestaService {
 
 	@Override
 	public Optional<Respuesta> findById(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return respuestaRepository.findById(id);
 	}
 
 	@Override
 	public Respuesta save(Respuesta respuesta) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return respuestaRepository.save(respuesta);
 	}
 
 	@Override
 	public void deleteById(Integer id) {
-		// TODO Auto-generated method stub
+		this.respuestaRepository.deleteById(id);
 		
 	}
 
